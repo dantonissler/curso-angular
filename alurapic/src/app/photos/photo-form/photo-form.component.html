@@ -16,7 +16,6 @@
         </div>
       </ng-template>
     </div>
-
     <div class="col-md-6">
       <div class="form-group">
         <textarea formControlName="description" class="form-control form-control-sm"
@@ -24,19 +23,16 @@
         <ap-vmessage text="Max length is 300" *ngIf="photoForm.get('description').errors?.maxlength">
         </ap-vmessage>
       </div>
-
       <div class="form-group">
         <label class="text-muted">
           Allow comments
           <input formControlName="allowComments" type="checkbox">
         </label>
       </div>
-
       <button [disabled]="photoForm.invalid" type="submit" class="btn btn-primary btn-block">
         Upload
       </button>
-
-      <a class="btn btn-secondary btn-block">Cancel</a>
+      <a class="btn btn-secondary btn-block" [routerLink]="['']">Cancel</a>
     </div>
   </form>
 </div>
